@@ -515,7 +515,7 @@ Redux::setSection($opt_name, array(
             'id'       => 'home-about-btn-text-background',
             'type'     => 'color',
             'title'    => __( 'رنگ پسزمینه پنل', 'redux-framework-demo' ),
-            'default'  => '#009688',
+            'default'  => '#009698',
             'validate' => 'color',
         ),
     )
