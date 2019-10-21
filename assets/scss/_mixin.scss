@@ -1,0 +1,20 @@
+@mixin media($media) {
+  $size: '';
+  @if($media == 'lg') {
+    $size: '1199.98px';
+  } @else if($media == 'md') {
+    $size: '991.98px';
+  } @else if($media == 'sm') {
+    $size: '767.98px';
+  } @else if($media == 'xs') {
+    $size: '575.98px';
+  } @else if($media == 'x-sm') {
+    $size: '480px';
+  } @else if($media == 't-xs') {
+    $size: '320px';
+  }
+  @media (max-width: ($size)) {
+    @content;
+  }
+
+}
