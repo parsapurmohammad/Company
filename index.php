@@ -14,48 +14,10 @@
         require_once 'inc/template/home/about.php';
     ?>
 
-    <div class="container-fluid panel-p weblog-content">
-        <div class="row">
-            <div class="container">
-                <div class="row">
-                    <div class="panel-title col-md-12">
-                        <header class="text-center">
-                            <h5>نمونه کارها</h5>
-                            <small>آخرین پروژه های انجام شده توسط ما</small>
-                            <hr/>
-                        </header>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="owl-cont owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="cont-img">
-                                    <a href="#">
-                                        <img src="<?php bloginfo('template_url'); ?> /images/temp/5-400x400.jpg" alt=""/>
-                                    </a>
-                                </div>
-                                <div class="cont-ex">
-                                    <a href="#"><strong>نمونه بسته بندی بستنی با دیزاین</strong></a>
-                                    <a href="#"><small>بسته بندی</small></a>,
-                                    <a href="#"><small>طراحی مدرن</small></a>
-                                    <div class="cont-date">
-                                        <strong>30</strong>
-                                        <span>آبان</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <?php
+        if($company_options['home-blog-panel-status']==0)
+        require_once 'inc/template/home/blog.php';
+    ?>
     <div class="container panel-p viewpoint">
         <div class="row">
             <div class="panel-title col-md-12">

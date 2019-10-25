@@ -521,6 +521,44 @@ Redux::setSection($opt_name, array(
     )
 
 ));
+Redux::setSection($opt_name, array(
+    'title' => __('پنل بلاگ ها', 'redux-framework-demo'),
+    'id' => 'home-blog-panel',
+    'subsection' => true,
+    'fields' => array(
+        array(
+            'id' => 'home-blog-panel-status',
+            'type' => 'button_set',
+            'title' => __('وضعیت پنل', 'redux-framework-demo'),
+            'options' => array(
+                '0' => 'فعال',
+                '1' => 'غیر فعال'
+            ),
+            'default' => 1,
+        ),
+        array(
+            'id'        => 'home-blog-panel-section',
+            'type'      => 'section',
+            'title' => __('محتوا', 'redux-framework'),
+            'subtitle' => __('', 'redux-framework'),
+            'indent'    => true,
+            'required' => array('home-blog-panel-status','=',0)
+        ),
+        array(
+            'id'        => 'home-blog-panel-title',
+            'type'      => 'text',
+            'title' => __('سربرگ', 'redux-framework'),
+            'default' => 'وبلاگ های نیوکمپانی'
+        ),
+        array(
+            'id'        => 'home-blog-panel-subtitle',
+            'type'      => 'text',
+            'title' => __('متن عنوان', 'redux-framework'),
+            'default' => 'آخرین پروژه های انجام شده توسط ما'
+        ),
+    ),
+
+    ));
     /*
      *
      * YOU MUST PREFIX THE FUNCTIONS BELOW AND ACTION FUNCTION CALLS OR ANY OTHER CONFIG MAY OVERRIDE YOUR CODE.
